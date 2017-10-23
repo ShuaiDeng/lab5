@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>post</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+<span style="text-align: center;margin-left: 50%;" ><a href="AdminHome.html">Index</a></span>
+<div style="text-align: center; margin-top: 200px;">
+	<form action="CreatePosts.php" method="post" onsubmit="return check();" id="postform">
+		<div style="margin-bottom:10px;">
+			<span style="font-size:25px;">user ID:</span>
+			<span style="display: inline-block;">
+				<input type="text" name="userid" id="user" style="height: 25px;">
+			</span>
+		</div>
+		<div style="margin: 40px 0px 20px 0px;">
+			<span style="font-size: 25px; line-height: -100px;">content:</span>
+				<span style="display: inline-block;">
+				<textarea name="content" form="postform" style="width: 200px;height: 100px" id="content">
+					
+				</textarea>
+			</span>
+		</div>
+		<input type="submit" name="" value ="Post" style="width: 70px;height: 30px;">
+	</form>
+</div>
+</body>
+<script>
+	function check(){
+		var username = document.getElementById('user').value;
+		var content = document.getElementById('content').value;
+		if (username.trim().length != 0 && content.trim().length!=0) {
+			return true;
+		}else{
+			alert('Please enter something');
+			return false;
+		}
+		
+	}
+</script>
+</html>

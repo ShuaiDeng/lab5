@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>e1</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+<span style="text-align: center;margin-left: 50%;" ><a href="AdminHome.html">Index</a></span>
+<div style="text-align: center; margin-top: 200px;">
+	<p style="font-size: 30px;">Please input your user ID:</p>
+	<form action="CreateUser.php" method="post" onsubmit="return check();">
+		<div style="margin-bottom:20px;">
+			<span style="font-size: 25px;">user:</span>
+			<span style="display: inline-block;">
+				<input type="text" name="username" id="user" style="height: 25px;">
+			</span>
+		</div>
+		<!-- <div style="margin: 10px 0px 20px 0px;">
+			<span>pass:</span>
+				<span style="display: inline-block;">
+				<input type="password" name="password" id="pass">
+			</span>
+		</div> -->
+		<input type="submit" name="" value ="Create" style="width: 70px;height: 30px">
+	</form>
+</div>
+</body>
+<script>
+	function check(){
+		var username = document.getElementById('user').value;
+		if (username.length != 0) {
+			return true;
+		}else{
+			alert('Please enter your name');
+			return false;
+		}
+		
+	}
+</script>
+</html>
